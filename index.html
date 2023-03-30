@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>HID Login</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class = "form-box">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="email" placeholder="Email ID" id="email">
+            </div> 
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="pass">
+                <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa fa-eye" aria-hidden="true"></i>
+                    <i id="hide2" class="fa fa-eye-slash" aria-hidden="true"></i>
+                </span>
+            </div>  
+            <button type="button" class="login-btn" onclick="auth()">LOGIN</button>
+        </div>
+            <script>
+                function myFunction(){
+                    var x = document.getElementById("pass");
+                    var y = document.getElementById("hide1");
+                    var z = document.getElementById("hide2");
+                    
+                    if(x.type === 'password'){
+                        x.type = "text";
+                        y.style.display = "block";
+                        z.style.display = "none";
+                    }
+                    else{
+                        x.type = "password";
+                        y.style.display = "none";
+                        z.style.display = "block";
+                    }
+                } 
+            </script>
+            <script>    
+                function auth(){
+                    var email = document.getElementById("email").value;
+                    var pass = document.getElementById("pass").value;
+
+                    if(email == "admin@gmail.com" && pass == "admin"){
+                        window.location.assign("app.html");
+                        alert("Login Successful!");
+                    }
+                    else{
+                        alert("Invalid Credentials!");
+                        return;
+                    }
+                }
+            </script>
+    </body>
+</html>

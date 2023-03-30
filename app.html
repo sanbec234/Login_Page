@@ -1,0 +1,26 @@
+<head>
+  <link rel="stylesheet" href="ch.css">
+</head>
+<body>
+  <h1>Welcome to HID!</h1>
+  
+  <?php
+    include 'login.php';
+  ?>
+    <div class="btn"><a href="">LOGIN</a>
+    <h1>Choose your option</h1>
+    <button class="btn" onclick="army()"><a href="">Army</a></button>
+    <button class="btn" onclick="driv()">Driving License</button>
+    </div>
+    <script>
+      function army(){
+        window.location.assign("ap.html");
+      }
+    </script>
+    <script>
+      function driv(){
+        window.location.assign("sd.html");
+      }
+    </script>
+</body>
+
